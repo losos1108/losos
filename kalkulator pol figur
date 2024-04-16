@@ -1,0 +1,43 @@
+import math
+
+def pole_prostokata(a, b):
+    return a * b
+
+def pole_kwadratu(a):
+    return a * a
+
+def pole_trojkata(a, h):
+    return 0.5 * a * h
+
+def pole_kola(r):
+    return math.pi * r**2
+
+def main():
+    print("Witaj w kalkulatorze pól figur geometrycznych!")
+    print("Dostępne figury:")
+    print("1. Prostokąt")
+    print("2. Kwadrat")
+    print("3. Trójkąt")
+    print("4. Koło")
+
+    wybor = input("Wybierz figurę (wpisz numer): ")
+
+    if wybor == '1':
+        a = float(input("Podaj długość boku a: "))
+        b = float(input("Podaj długość boku b: "))
+        print("Pole prostokąta wynosi:", pole_prostokata(a, b))
+    elif wybor == '2':
+        a = float(input("Podaj długość boku kwadratu: "))
+        print("Pole kwadratu wynosi:", pole_kwadratu(a))
+    elif wybor == '3':
+        a = float(input("Podaj długość podstawy trójkąta: "))
+        h = float(input("Podaj wysokość trójkąta: "))
+        print("Pole trójkąta wynosi:", pole_trojkata(a, h))
+    elif wybor == '4':
+        r = float(input("Podaj promień koła: "))
+        print("Pole koła wynosi:", pole_kola(r))
+    else:
+        print("Niepoprawny wybór!")
+
+if __name__ == "__main__":
+    main()
